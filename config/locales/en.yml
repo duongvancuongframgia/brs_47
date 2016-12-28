@@ -84,9 +84,15 @@ en:
         not_found: "Review not found"
       books:
         not_found: "Book not found"
+      rate:
+        error_save: "Can't rating book"
+        error_update: "Can't re-rating book"
       application:
         pleaselogin: "Please log in."
       invalid_email: "Invalid email/password combination"
+  account_successfully: "Account successfully!"
+  update_user_successfully: "Profile updated"
+  user_delete_successfully: "User deleted"
   account_successfully: "Account successfully!"
   update_user_successfully: "Profile updated"
   user_delete_successfully: "User deleted"

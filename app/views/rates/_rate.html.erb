@@ -1,0 +1,9 @@
+<% i = 1 %>
+<% while i <= Settings.max_rate do %>
+  <%= link_to book_rates_path(book, num_rate: i),
+    remote: true, method: :post,
+    class: "btn btn-default btn-grey btn-xs" do %>
+    <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+  <% end %>
+  <% i += 1 %>
+<% end %>

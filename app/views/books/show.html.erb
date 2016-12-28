@@ -33,7 +33,15 @@
     </div>
   </div>
   <div class="col-sm-9">
-    <div class="review-block-rate"></div>
+    <div class="review-block-rate">
+      <% if logged_in? %>
+        <% if current_user.rating? @book %>
+          <%= render partial: "rates/re_rate", locals: {book: @book} %>
+        <% else %>
+          <%= render partial: "rates/rate", locals: {book: @book} %>
+        <% end %>
+      <% end %>
+    </div>
     <div class="review-block-rate">
       <button type="button" class="btn btn-danger btn-circle">
         <i class="glyphicon glyphicon-heart"></i>

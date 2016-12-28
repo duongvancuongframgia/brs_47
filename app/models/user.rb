@@ -61,5 +61,20 @@ class User < ApplicationRecord
 
   def following? other_user
     following.include? other_user
+
+  def rating? book
+    rating.include? book
+  end
+
+  def rate book, num_rate
+    active_rates.create book_id: book.id, num_rate: num_rate
+  end
+
+  def re_rate book, num_rate
+    active_rates.find_by(book_id: book.id).update_attributes num_rate: num_rate
+  end
+
+  def get_rating book
+    active_rates.find_by book_id: book.id
   end
 end

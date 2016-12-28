@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   end
   resources :books, only: [:index, :show] do
     resources :reviews
+    resources :rates, except: :destroy
   end
   resources :relationships, only: [:create, :destroy]
 end
